@@ -37,6 +37,7 @@ class Home extends Component {
         allPosts,
         posts
       } = this.state;
+      
       const nextPage = page + postsPerPage;
       const nextPosts = allPosts.slice(nextPage, nextPage + postsPerPage)
       posts.push(...nextPosts);
@@ -63,7 +64,7 @@ class Home extends Component {
 
     return (
       <section className="container">
-        <div class="search-container">
+        <div className="search-container">
         {!!searchValue && (
           <h1>Search Value: {searchValue}</h1>
         )}
