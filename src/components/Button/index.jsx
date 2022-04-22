@@ -9,8 +9,10 @@ export class Button extends Component {
         return (
              <button 
              className='button' 
-             onClick={onClick} disabled={disabled}>
-                 {text} 
+             onClick={onClick} 
+             disabled={disabled}
+             >
+             {text} 
             
              </button>
         )
