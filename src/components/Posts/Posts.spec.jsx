@@ -34,13 +34,25 @@ describe('<Posts />', () => {
         .toHaveLength(3);
         expect(screen.getAllByText(/body/i))
         .toHaveLength(3);
+    });
 
-        it('should match snapshot', () => {
-        const {container } = render(<Posts {...props}/>);
-        
+    it('should match snapshot', () => {
+        const { container } = render(<Posts {...props} />);
+    
         expect(container.firstChild).toMatchSnapshot();
+        expect(screen.getAllByRole('img', { name: /title/i }))
+    });
 
-        // tentar ver qual foi o erro do teste. aula 36, parei no minuto 7:56
+    it('should not render posts', () => {
+        render(<Posts />);
+    
+        expect(screen.queryByRole('heading', { name: /title/i })).not.toBeInTheDocument();
+    });
 
+    it('should match snapshot', () => {
+        const { container } = render(<Posts {...props} />);
+    
+        expect(container.firstChild).toMatchSnapshot();
+        expect(screen.getAllByRole('img', { name: /title/i }))
     });
 });
