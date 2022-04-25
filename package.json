@@ -34,5 +34,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.29.4"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/rucp/udemy-first-project.git",
+  "author": "rucp <rucp33@gmail.com>",
+  "license": "MIT"
 }
